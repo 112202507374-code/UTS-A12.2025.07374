@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warung Ramyeon — Jasa Editing MVL, CCL, Poster & Lainnya</title>
+  <meta name="description" content="Warung Ramyeon: jasa edit MVL, CCL, teaser, poster, rapch, wording, thumbnail, line distribution, layout KCA, dan ID card. Pesan langsung lewat Telegram.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+  <style>@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css") layer(bootstrap);</style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="snow" aria-hidden="true"></canvas>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" aria-label="Warung Ramyeon, ke atas">
+      <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
+        <path d="M4 18h32a16 14 0 0 1-32 0z" fill="#D7261E"/>
+        <path d="M9 18c3-4 5 4 8 0s5 4 8 0 5 4 7 0" stroke="#FFC23D" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <path d="M10 9l20 7M14 6l18 9" stroke="#2B1208" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Warung Ramyeon</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#regulasi">Regulasi</a>
+      <a href="#hasil">Hasil</a>
+      <a href="#menu">Menu</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#admin">Admin</a>
+      <a href="#rnk">RNK</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#daftar">Daftar</a>
+      <a href="https://t.me/warungramyeon" target="_blank" rel="noopener" class="nav-cta">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M21.5 3.5L2.8 10.7c-1 .4-1 1.8.1 2.1l4.6 1.4 1.8 5.6c.3.9 1.4 1.1 2 .4l2.6-2.6 4.7 3.5c.8.6 1.9.1 2.1-.9l3.1-15.4c.2-1-.8-1.8-1.7-1.3z" fill="currentColor"/></svg>
+        Kunjungi kami
+      </a>
+    </nav>
+
+    <div class="nav-tools">
+      <button class="snow-btn" id="snowBtn" aria-pressed="true" title="Nyalakan / matikan salju">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9 4l3 2 3-2M9 20l3-2 3 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <span class="sr-only">Salju</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero" id="dashboard">
+      <ul class="lights" id="lights" aria-hidden="true"></ul>
+
+      <div class="hero-text">
+        <p class="hero-hello">Annyeong! Selamat datang di</p>
+        <h1 class="wordmark">
+          <span class="wm-line">Warung</span>
+          <span class="wm-line wm-2">Ramyeon</span>
+        </h1>
+        <p class="hero-lead">
+          Warung edit MVL, CCL, teaser, poster, sampai ID card. Kamu kirim bahannya,
+          kami masak sampai matang: hangat, rapi, dan siap kamu pamerkan.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-red">Racik pesananmu</a>
+          <a href="#hasil" class="btn btn-ghost">Lihat hasil masakan</a>
+        </div>
+      </div>
+
+      <div class="hero-bowl" id="heroBowl" title="Klik mangkuknya">
+        <svg viewBox="0 0 320 300" aria-label="Ilustrasi mangkuk ramyeon memakai topi Santa">
+          <g class="steam" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" opacity=".85">
+            <path d="M120 120c-12-18 12-26 0-46s10-26 2-40"/>
+            <path d="M160 112c-12-18 12-26 0-46s10-26 2-40"/>
+            <path d="M200 120c-12-18 12-26 0-46s10-26 2-40"/>
+          </g>
+          <g class="chopsticks">
+            <rect x="196" y="40" width="9" height="150" rx="4" fill="#8A4B24" transform="rotate(28 200 115)"/>
+            <rect x="214" y="44" width="9" height="150" rx="4" fill="#A55E2E" transform="rotate(36 218 119)"/>
+          </g>
+          <ellipse cx="160" cy="170" rx="128" ry="30" fill="#E8501C"/>
+          <path class="noodle" d="M50 168c20-14 30 14 50 0s30 14 50 0 30 14 50 0 30 14 50 0 20 10 20 6" stroke="#FFC23D" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <path class="noodle n2" d="M60 178c20-12 30 12 50 0s30 12 50 0 30 12 50 0 30 12 50 0" stroke="#FFD56B" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <ellipse cx="112" cy="162" rx="22" ry="12" fill="#FFFDF8"/>
+          <ellipse cx="114" cy="162" rx="10" ry="7" fill="#FF9F1C"/>
+          <g fill="#2E7D4F"><circle cx="190" cy="165" r="5"/><circle cx="204" cy="172" r="4"/><circle cx="176" cy="176" r="4"/><circle cx="214" cy="160" r="3.5"/></g>
+          <path d="M28 172h264c-6 70-60 104-132 104S34 242 28 172z" fill="#D7261E"/>
+          <path d="M28 172h264c-1 12-4 23-8 33H36c-4-10-7-21-8-33z" fill="#B81D17"/>
+          <g fill="#FFFDF8" opacity=".9">
+            <path d="M80 232l6-10 6 10-6 10z"/><path d="M130 240l6-10 6 10-6 10z"/><path d="M180 240l6-10 6 10-6 10z"/><path d="M230 232l6-10 6 10-6 10z"/>
+          </g>
+          <g class="santa-hat">
+            <path d="M232 160c10-40 40-58 70-46-14 10-22 30-18 52z" fill="#D7261E"/>
+            <rect x="222" y="156" width="70" height="18" rx="9" fill="#FFFDF8"/>
+            <circle cx="304" cy="114" r="11" fill="#FFFDF8"/>
+          </g>
+        </svg>
+        <span class="bowl-bubble" id="bowlBubble">Psst, klik aku</span>
+      </div>
+
+      <div class="xmas" id="xmas">
+        <div class="xmas-count">
+          <p class="xmas-title" id="xmasTitle">Menuju Natal</p>
+          <div class="xmas-tiles" id="xmasTiles" role="timer" aria-live="off">
+            <div class="xt"><b data-u="d">00</b><small>hari</small></div>
+            <div class="xt"><b data-u="h">00</b><small>jam</small></div>
+            <div class="xt"><b data-u="m">00</b><small>menit</small></div>
+            <div class="xt"><b data-u="s">00</b><small>detik</small></div>
+          </div>
+          <p class="xmas-sub" id="xmasSub">Dapur makin ramai menjelang Natal. Pesan sebelum antrean penuh.</p>
+        </div>
+
+        <div class="gift-stage" id="giftStage">
+          <div class="gift-card" id="giftCard" aria-live="polite">
+            <p class="gift-from">Dari dapur Warung Ramyeon</p>
+            <p class="gift-msg" id="giftMsg"></p>
+            <div class="gift-actions">
+              <button type="button" class="gift-again" id="giftAgain">Buka kado lain</button>
+              <a href="#menu" class="gift-link">Racik pesanan</a>
+            </div>
+          </div>
+          <button type="button" class="gift" id="gift" aria-label="Buka kado Natal">
+            <svg viewBox="0 0 200 190" aria-hidden="true">
+              <g class="gift-lid">
+                <path d="M100 38c-14-26-46-30-50-12-3 14 26 14 50 12z" fill="#FFC23D" stroke="#2B1208" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M100 38c14-26 46-30 50-12 3 14-26 14-50 12z" fill="#FFC23D" stroke="#2B1208" stroke-width="4" stroke-linejoin="round"/>
+                <rect x="22" y="38" width="156" height="34" rx="6" fill="#D7261E" stroke="#2B1208" stroke-width="4"/>
+                <rect x="88" y="38" width="24" height="34" fill="#FFC23D" stroke="#2B1208" stroke-width="4"/>
+                <circle cx="100" cy="37" r="9" fill="#FF9F1C" stroke="#2B1208" stroke-width="4"/>
+              </g>
+              <g class="gift-box">
+                <rect x="32" y="70" width="136" height="110" rx="6" fill="#B81D17" stroke="#2B1208" stroke-width="4"/>
+                <rect x="88" y="70" width="24" height="110" fill="#FFC23D" stroke="#2B1208" stroke-width="4"/>
+                <g fill="#FFFDF8" opacity=".85">
+                  <circle cx="56" cy="98" r="4"/><circle cx="68" cy="140" r="3"/><circle cx="140" cy="104" r="3.5"/><circle cx="148" cy="150" r="4"/><circle cx="52" cy="160" r="3"/>
+                </g>
+              </g>
+            </svg>
+          </button>
+          <p class="gift-hint" id="giftHint">Pencet kadonya</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>MVL</span><span>CCL</span><span>Teaser</span><span>Poster</span><span>Rapch</span>
+        <span>Wording</span><span>Thumbnail</span><span>Line Distribution</span><span>Layout KCA</span><span>ID Card</span>
+        <span>MVL</span><span>CCL</span><span>Teaser</span><span>Poster</span><span>Rapch</span>
+        <span>Wording</span><span>Thumbnail</span><span>Line Distribution</span><span>Layout KCA</span><span>ID Card</span>
+      </div>
+    </div>
+
+    <section class="section regulasi" id="regulasi">
+      <div class="section-head">
+        <h2>Regulasi</h2>
+        <p>Aturan main di warung kami. Baca dulu sebelum pesan, biar sama-sama enak.</p>
+      </div>
+
+      <div class="rules-wrap">
+        <div class="notice">
+          <span class="pin" aria-hidden="true"></span>
+          <div class="rule-tabs" role="tablist" aria-label="Kategori regulasi">
+            <button role="tab" aria-selected="true" aria-controls="r-pesan" id="t-pesan" class="rule-tab active">Pemesanan</button>
+            <button role="tab" aria-selected="false" aria-controls="r-bayar" id="t-bayar" class="rule-tab" tabindex="-1">Pembayaran</button>
+            <button role="tab" aria-selected="false" aria-controls="r-revisi" id="t-revisi" class="rule-tab" tabindex="-1">Revisi</button>
+            <button role="tab" aria-selected="false" aria-controls="r-lain" id="t-lain" class="rule-tab" tabindex="-1">Lain-lain</button>
+          </div>
+
+          <div class="rule-panel" role="tabpanel" id="r-pesan" aria-labelledby="t-pesan">
+            <ul>
+              <li>Pesan hanya lewat Telegram ke <a href="https://t.me/jRami" target="_blank" rel="noopener">@jRami</a> atau <a href="https://t.me/lkimbora" target="_blank" rel="noopener">@lkimbora</a>.</li>
+              <li>Isi format order dengan lengkap. Order tanpa format akan kami minta ulang.</li>
+              <li>Bahan (foto, lagu, teks, referensi) dikirim lengkap di awal.</li>
+              <li>Deadline lebih dari 7 hari dihitung normal. Deadline 3 – 7 hari dihitung inrush, dan kurang dari 3 hari dihitung inrush besar dengan biaya lebih tinggi.</li>
+              <li>Line Distribution tidak dapat inrush.</li>
+              <li>Antrean dihitung sesuai urutan pembayaran, bukan urutan chat.</li>
+            </ul>
+          </div>
+          <div class="rule-panel" role="tabpanel" id="r-bayar" aria-labelledby="t-bayar" hidden>
+            <ul>
+              <li>Pembayaran wajib full (lunas) di awal, sebelum pesanan dikerjakan.</li>
+              <li>Kami tidak menerima DP atau bayar setengah.</li>
+              <li>Pesanan masuk antrean setelah pembayaran diterima.</li>
+              <li>Metode pembayaran (e-wallet atau transfer) diberikan oleh admin saat order.</li>
+              <li>Kirim bukti bayar di chat yang sama dengan admin yang melayanimu.</li>
+            </ul>
+          </div>
+          <div class="rule-panel" role="tabpanel" id="r-revisi" aria-labelledby="t-revisi" hidden>
+            <ul>
+              <li>Revisi kecil gratis selama masih sesuai pesanan awal.</li>
+              <li>Revisi kecil: teks, warna, posisi, timing. Ganti konsep dihitung order baru.</li>
+              <li>Ajukan revisi paling lambat 2 × 24 jam setelah preview dikirim.</li>
+            </ul>
+          </div>
+          <div class="rule-panel" role="tabpanel" id="r-lain" aria-labelledby="t-lain" hidden>
+            <ul>
+              <li>Tidak ada refund setelah pengerjaan dimulai.</li>
+              <li>Hasil boleh dipakai di akunmu, tapi tidak boleh dijual ulang atau diakui sebagai karya sendiri.</li>
+              <li>Hasil boleh kami tampilkan di galeri, kecuali kamu minta dirahasiakan.</li>
+              <li>Admin membalas setiap hari pukul 10.00 – 22.00 WIB.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="format">
+          <h3>Format order</h3>
+          <p>Salin, isi, lalu kirim ke admin.</p>
+          <pre id="formatText">Nama / username:
+Jenis edit:
+Jumlah:
+Judul lagu / teks:
+Referensi:
+Deadline:
+Catatan:</pre>
+          <button class="btn btn-line btn-wide" id="copyFormat">Salin format order</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results" id="hasil">
+      <div class="section-head">
+        <h2>Hasil masakan kami</h2>
+        <p>Geser garis di gambar untuk membandingkan sebelum dan sesudah diedit. Klik karya mana saja untuk melihat detailnya.</p>
+      </div>
+
+      <figure class="compare" id="compare">
+        <div class="compare-stage">
+          <div class="compare-layer before">
+            <svg viewBox="0 0 800 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#scene"/></svg>
+            <span class="compare-tag">Mentah</span>
+          </div>
+          <div class="compare-layer after">
+            <svg viewBox="0 0 800 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#scene"/></svg>
+            <span class="compare-tag tag-after">Matang</span>
+          </div>
+          <div class="compare-handle" aria-hidden="true"><span></span></div>
+          <input type="range" min="0" max="100" value="50" id="compareRange" aria-label="Geser untuk membandingkan gambar sebelum dan sesudah edit">
+        </div>
+        <figcaption>Latar poster Natal: warna dibuat hangat, langit dipertegas, lampu dibuat menyala.</figcaption>
+      </figure>
+
+      <div class="filters" id="filters" role="tablist" aria-label="Filter hasil"></div>
+
+      <div class="works" id="works"></div>
+      <p class="empty" id="worksEmpty" hidden>Belum ada contoh untuk kategori ini. Tanya admin di Telegram, kami kirimkan contohnya.</p>
+    </section>
+
+    <section class="section menu" id="menu">
+      <div class="section-head">
+        <h2>Menu harga</h2>
+        <p>Daftar harga semua menu ada di bawah. Mau tahu kira-kira totalnya? Racik sendiri di dapur sebelah, perkiraannya langsung dihitung.</p>
+      </div>
+
+      <div class="board" id="board"></div>
+
+      <div class="kitchen" id="kitchen">
+        <div class="kitchen-form">
+          <h3>Racik sendiri</h3>
+
+          <fieldset>
+            <legend>1. Pilih menu</legend>
+            <div class="options menu-pick" id="menuPick"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Atur isi mangkuk</legend>
+            <div class="fields" id="menuFields"></div>
+            <details class="menu-notes" id="menuNotes">
+              <summary>Ketentuan menu ini</summary>
+              <ol></ol>
+            </details>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Deadline</legend>
+            <label class="deadline">
+              <span class="sr-only">Tanggal dan jam deadline</span>
+              <input type="datetime-local" id="deadline" aria-describedby="deadlineInfo">
+            </label>
+            <div class="rush-scale" id="rushScale" aria-hidden="true">
+              <span data-level="0"><b>Normal</b>lebih dari 7 hari</span>
+              <span data-level="1"><b>Inrush</b>3 – 7 hari</span>
+              <span data-level="2"><b>Inrush besar</b>kurang dari 3 hari</span>
+            </div>
+            <p class="spicy-label" id="deadlineInfo"></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Catatan <small>(opsional)</small></legend>
+            <textarea id="catatan" rows="3" maxlength="500" placeholder="Contoh: warna dominan biru, font tegas, referensi menyusul."></textarea>
+          </fieldset>
+        </div>
+
+        <aside class="kitchen-bowl">
+          <svg viewBox="0 0 300 230" id="buildBowl" aria-label="Mangkuk pesananmu">
+            <ellipse cx="150" cy="110" rx="122" ry="28" id="broth" fill="#FF7A1A"/>
+            <g class="b-noodles" stroke="#FFD56B" stroke-width="6" fill="none" stroke-linecap="round">
+              <path d="M44 108c18-12 28 12 46 0s28 12 46 0 28 12 46 0 28 12 46 0 20 8 22 4"/>
+              <path d="M54 118c18-10 28 10 46 0s28 10 46 0 28 10 46 0 28 10 46 0"/>
+            </g>
+            <g class="b-top" id="t-0"><ellipse cx="98" cy="102" rx="22" ry="12" fill="#FFFDF8"/><ellipse cx="100" cy="102" rx="10" ry="7" fill="#FF9F1C"/></g>
+            <g class="b-top" id="t-1"><path d="M150 92l18 4 6 14-14 8-16-6z" fill="#C81E1E"/><path d="M168 100l12 2 2 10-10 4z" fill="#E8402A"/></g>
+            <g class="b-top" id="t-2"><rect x="196" y="72" width="22" height="34" rx="2" fill="#17402F" transform="rotate(-12 207 89)"/><rect x="214" y="74" width="22" height="34" rx="2" fill="#1F5A40" transform="rotate(6 225 91)"/></g>
+            <g class="b-top" id="t-3" fill="#2E7D4F"><circle cx="130" cy="114" r="4"/><circle cx="142" cy="122" r="3.5"/><circle cx="120" cy="124" r="3"/><circle cx="184" cy="120" r="4"/><circle cx="196" cy="114" r="3"/><circle cx="70" cy="114" r="3.5"/></g>
+            <g class="b-chili" id="chili"></g>
+            <path d="M22 112h256c-6 66-56 100-128 100S28 178 22 112z" fill="#D7261E"/>
+            <path d="M22 112h256c-1 11-4 21-8 31H30c-4-10-7-20-8-31z" fill="#B81D17"/>
+            <text x="150" y="186" text-anchor="middle" class="bowl-text" id="bowlText">MVL</text>
+          </svg>
+
+          <div class="bill">
+            <div id="billLines"></div>
+            <div class="bill-total"><span>Perkiraan</span><b id="billTotal">Rp 0</b></div>
+            <button class="btn btn-red btn-wide" id="orderBtn">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21.5 3.5L2.8 10.7c-1 .4-1 1.8.1 2.1l4.6 1.4 1.8 5.6c.3.9 1.4 1.1 2 .4l2.6-2.6 4.7 3.5c.8.6 1.9.1 2.1-.9l3.1-15.4c.2-1-.8-1.8-1.7-1.3z" fill="currentColor"/></svg>
+              Kirim pesanan lewat Telegram
+            </button>
+            <p class="bill-note" id="billNote">Harga final ditentukan admin sesuai tingkat kesulitan.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section about" id="tentang">
+      <div class="about-pic">
+        <div class="polaroid">
+          <svg viewBox="0 0 300 260" aria-label="Ilustrasi meja kerja editor dengan laptop dan semangkuk ramyeon">
+            <rect width="300" height="260" fill="#2B1208"/>
+            <rect x="0" y="170" width="300" height="90" fill="#5A2E14"/>
+            <rect x="60" y="70" width="150" height="96" rx="6" fill="#17402F"/>
+            <rect x="68" y="78" width="134" height="80" rx="3" fill="#0F2A1F"/>
+            <rect x="76" y="134" width="40" height="8" rx="2" fill="#FF7A1A"/>
+            <rect x="120" y="134" width="56" height="8" rx="2" fill="#D7261E"/>
+            <rect x="76" y="146" width="70" height="6" rx="2" fill="#FFC23D"/>
+            <rect x="150" y="146" width="40" height="6" rx="2" fill="#2E7D4F"/>
+            <rect x="80" y="86" width="110" height="42" rx="2" fill="#E8501C" opacity=".8"/>
+            <path d="M40 168h190l-14 12H54z" fill="#3B1C0C"/>
+            <path d="M226 158h56c-3 20-16 30-28 30s-25-10-28-30z" fill="#D7261E"/>
+            <g stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7" class="steam small"><path d="M246 150c-6-8 6-12 0-20"/><path d="M262 150c-6-8 6-12 0-20"/></g>
+            <path d="M0 20q75 40 150 0t150 0" fill="none" stroke="#2E7D4F" stroke-width="3"/>
+            <g><circle cx="38" cy="34" r="6" fill="#FFC23D"/><circle cx="110" cy="38" r="6" fill="#D7261E"/><circle cx="190" cy="38" r="6" fill="#FF7A1A"/><circle cx="262" cy="34" r="6" fill="#FFC23D"/></g>
+          </svg>
+          <p class="polaroid-cap">Dapur kami, jam 2 pagi</p>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <h2>Tentang Warung Ramyeon</h2>
+        <p>
+          Warung Ramyeon lahir dari kebiasaan begadang ngedit sambil masak ramyeon.
+          Awalnya cuma bantu teman bikin MVL dan poster, lalu teman dari teman ikut pesan,
+          sampai akhirnya kami buka warung sendiri.
+        </p>
+        <p>
+          Cara kerja kami mirip warung beneran: kamu pesan, kami masak, kamu cicipi dulu.
+          Kalau rasanya belum pas, kami tambah bumbunya sampai kamu bilang "nah, ini dia."
+        </p>
+        <ul class="facts">
+          <li><b>Dua admin siap melayani</b>, jadi chat kamu tidak menunggu lama.</li>
+          <li><b>Kamu bicara dengan editornya langsung</b>, bukan dengan bot.</li>
+          <li><b>Bahanmu aman</b> dan dihapus 30 hari setelah pesanan selesai.</li>
+        </ul>
+        <p class="signature">Salam hangat, juru masak Warung Ramyeon</p>
+      </div>
+    </section>
+
+    <section class="section admin-sec" id="admin">
+      <div class="section-head">
+        <h2>Admin</h2>
+        <p>Dua orang di balik Warung Ramyeon. Klik kartunya untuk chat langsung di Telegram.</p>
+      </div>
+      <div class="admin-list">
+        <a class="admin-card" href="https://t.me/jRami" target="_blank" rel="noopener">
+          <span class="admin-tag">OWNER</span>
+          <span class="admin-photo"><span aria-hidden="true">J</span><img src="admin/jrami.jpg" alt="Foto admin @jRami" onerror="this.remove()"></span>
+          <b class="admin-name">@jRami</b>
+          <p class="admin-desc">Owner Warung Ramyeon. Ramah, sabar, dan jago editing, tangan di balik hasil masakan kami.</p>
+          <span class="admin-chat">Chat di Telegram</span>
+        </a>
+        <a class="admin-card" href="https://t.me/lkimbora" target="_blank" rel="noopener">
+          <span class="admin-tag">ADMIN</span>
+          <span class="admin-photo"><span aria-hidden="true">L</span><img src="admin/lkimbora.jpg" alt="Foto admin @lkimbora" onerror="this.remove()"></span>
+          <b class="admin-name">@lkimbora</b>
+          <p class="admin-desc">Satu-satunya admin Warung Ramyeon. Jago marketing dan paling sigap melayani pelanggan.</p>
+          <span class="admin-chat">Chat di Telegram</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section reviews" id="rnk">
+      <div class="section-head">
+        <h2>Kata yang sudah makan</h2>
+      </div>
+
+      <div class="receipts" id="receipts">
+        <div class="receipt-track" id="receiptTrack"></div>
+      </div>
+      <div class="receipt-nav">
+        <button class="round-btn" id="prevReview" aria-label="Testimoni sebelumnya">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+        </button>
+        <div class="dots" id="reviewDots"></div>
+        <button class="round-btn" id="nextReview" aria-label="Testimoni berikutnya">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="section testimoni" id="testimoni">
+      <div class="section-head">
+        <h2>Testimoni</h2>
+        <p>Pencet bola atau lampu di pohon Natal untuk melihat bukti pembayaran dari pelanggan kami.</p>
+      </div>
+
+      <div class="tree-wrap">
+        <div class="tree" id="tree">
+          <svg class="tree-svg" viewBox="0 0 400 480" aria-hidden="true">
+            <ellipse cx="200" cy="462" rx="170" ry="14" fill="#2B1208" opacity=".15"/>
+            <rect x="182" y="392" width="36" height="52" rx="4" fill="#5A2E14"/>
+            <path d="M150 436h100l-10 32h-80z" fill="#D7261E" stroke="#2B1208" stroke-width="3"/>
+            <path d="M145 428h110v12H145z" fill="#9E1711" stroke="#2B1208" stroke-width="3"/>
+            <path d="M200 200L55 400q18 12 36 0t36 0 36 0 37 0 36 0 36 0 36 0 37 0z" fill="#17402F" stroke="#2B1208" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M200 110L90 280q16 11 31 0t31 0 32 0 32 0 32 0 31 0 31 0z" fill="#1F5A40" stroke="#2B1208" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M200 40L120 170q16 10 32 0t32 0 32 0 32 0 32 0z" fill="#2E7D4F" stroke="#2B1208" stroke-width="3" stroke-linejoin="round"/>
+            <g fill="none" stroke="#FFC23D" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9">
+              <path d="M146 150q60 30 112-12"/>
+              <path d="M112 262q90 40 182-14"/>
+              <path d="M78 378q120 44 248-14"/>
+            </g>
+            <g stroke="#2B1208" stroke-width="3">
+              <rect x="70" y="420" width="56" height="44" rx="4" fill="#FF7A1A"/>
+              <rect x="268" y="428" width="64" height="36" rx="4" fill="#FFC23D"/>
+            </g>
+            <g stroke="#FFFDF8" stroke-width="6">
+              <path d="M98 420v44M70 440h56"/>
+              <path d="M300 428v36"/>
+            </g>
+          </svg>
+
+        </div>
+
+        <div class="testi-panel" id="testiPanel" aria-live="polite">
+          <div class="testi-empty">
+            <p class="testi-empty-big">Pilih satu bola di pohon</p>
+            <p>Setiap bola dan lampu menyimpan satu bukti pembayaran dari pelanggan Warung Ramyeon. Bintang di puncak membuka satu secara acak.</p>
+          </div>
+        </div>
+      </div>
+      <p class="tree-count" id="treeCount"></p>
+    </section>
+
+    <section class="section daftar" id="daftar">
+      <div class="section-head">
+        <h2>Daftar pelanggan</h2>
+        <p>Isi data singkat di bawah. Kartu member Warung Ramyeon-mu langsung terbentuk di sebelahnya.</p>
+      </div>
+
+      <div class="daftar-wrap">
+        <div class="daftar-card">
+          <form class="bs-zone" id="daftarForm" novalidate>
+            <div class="row g-3">
+              <div class="col-12">
+                <label for="fNama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="fNama" name="nama" placeholder="Nama lengkap" maxlength="40" required>
+                <div class="invalid-feedback">Nama wajib diisi.</div>
+              </div>
+              <div class="col-12">
+                <label for="fAlamat" class="form-label">Alamat</label>
+                <textarea class="form-control" id="fAlamat" name="alamat" rows="3" placeholder="Nama jalan, nomor rumah, kecamatan" required></textarea>
+                <div class="invalid-feedback">Alamat wajib diisi.</div>
+              </div>
+              <div class="col-12">
+                <label for="fKota" class="form-label">Kota</label>
+                <div class="row g-2">
+                  <div class="col-md-5">
+                    <input type="search" class="form-control" id="fCariKota" placeholder="Cari, misal: Bandung" aria-label="Cari kota atau kabupaten" autocomplete="off">
+                  </div>
+                  <div class="col-md-7">
+                    <select class="form-select" id="fKota" name="kota" required>
+                      <option value="" selected disabled>Pilih kota / kabupaten</option>
+                      <optgroup label="Kota pilihan">
+                        <option>Semarang</option>
+                        <option>Kudus</option>
+                        <option>Demak</option>
+                        <option>Pekalongan</option>
+                        <option>Tegal</option>
+                        <option>Surabaya</option>
+                        <option>Jakarta</option>
+                      </optgroup>
+                      <optgroup label="Aceh">
+                        <option>Kabupaten Aceh Selatan</option>
+                        <option>Kabupaten Aceh Tenggara</option>
+                        <option>Kabupaten Aceh Timur</option>
+                        <option>Kabupaten Aceh Tengah</option>
+                        <option>Kabupaten Aceh Barat</option>
+                        <option>Kabupaten Aceh Besar</option>
+                        <option>Kabupaten Pidie</option>
+                        <option>Kabupaten Aceh Utara</option>
+                        <option>Kabupaten Simeulue</option>
+                        <option>Kabupaten Aceh Singkil</option>
+                        <option>Kabupaten Bireuen</option>
+                        <option>Kabupaten Aceh Barat Daya</option>
+                        <option>Kabupaten Gayo Lues</option>
+                        <option>Kabupaten Aceh Jaya</option>
+                        <option>Kabupaten Nagan Raya</option>
+                        <option>Kabupaten Aceh Tamiang</option>
+                        <option>Kabupaten Bener Meriah</option>
+                        <option>Kabupaten Pidie Jaya</option>
+                        <option>Kota Banda Aceh</option>
+                        <option>Kota Sabang</option>
+                        <option>Kota Lhokseumawe</option>
+                        <option>Kota Langsa</option>
+                        <option>Kota Subulussalam</option>
+                      </optgroup>
+                      <optgroup label="Sumatera Utara">
+                        <option>Kabupaten Tapanuli Tengah</option>
+                        <option>Kabupaten Tapanuli Utara</option>
+                        <option>Kabupaten Tapanuli Selatan</option>
+                        <option>Kabupaten Nias</option>
+                        <option>Kabupaten Langkat</option>
+                        <option>Kabupaten Karo</option>
+                        <option>Kabupaten Deli Serdang</option>
+                        <option>Kabupaten Simalungun</option>
+                        <option>Kabupaten Asahan</option>
+                        <option>Kabupaten Labuhanbatu</option>
+                        <option>Kabupaten Dairi</option>
+                        <option>Kabupaten Toba</option>
+                        <option>Kabupaten Mandailing Natal</option>
+                        <option>Kabupaten Nias Selatan</option>
+                        <option>Kabupaten Pakpak Bharat</option>
+                        <option>Kabupaten Humbang Hasundutan</option>
+                        <option>Kabupaten Samosir</option>
+                        <option>Kabupaten Serdang Bedagai</option>
+                        <option>Kabupaten Batu Bara</option>
+                        <option>Kabupaten Padang Lawas Utara</option>
+                        <option>Kabupaten Padang Lawas</option>
+                        <option>Kabupaten Labuhanbatu Selatan</option>
+                        <option>Kabupaten Labuhanbatu Utara</option>
+                        <option>Kabupaten Nias Utara</option>
+                        <option>Kabupaten Nias Barat</option>
+                        <option>Kota Medan</option>
+                        <option>Kota Pematangsiantar</option>
+                        <option>Kota Sibolga</option>
+                        <option>Kota Tanjungbalai</option>
+                        <option>Kota Binjai</option>
+                        <option>Kota Tebing Tinggi</option>
+                        <option>Kota Padangsidimpuan</option>
+                        <option>Kota Gunungsitoli</option>
+                      </optgroup>
+                      <optgroup label="Sumatera Barat">
+                        <option>Kabupaten Pesisir Selatan</option>
+                        <option>Kabupaten Solok</option>
+                        <option>Kabupaten Sijunjung</option>
+                        <option>Kabupaten Tanah Datar</option>
+                        <option>Kabupaten Padang Pariaman</option>
+                        <option>Kabupaten Agam</option>
+                        <option>Kabupaten Lima Puluh Kota</option>
+                        <option>Kabupaten Pasaman</option>
+                        <option>Kabupaten Kepulauan Mentawai</option>
+                        <option>Kabupaten Dharmasraya</option>
+                        <option>Kabupaten Solok Selatan</option>
+                        <option>Kabupaten Pasaman Barat</option>
+                        <option>Kota Padang</option>
+                        <option>Kota Solok</option>
+                        <option>Kota Sawahlunto</option>
+                        <option>Kota Padang Panjang</option>
+                        <option>Kota Bukittinggi</option>
+                        <option>Kota Payakumbuh</option>
+                        <option>Kota Pariaman</option>
+                      </optgroup>
+                      <optgroup label="Riau">
+                        <option>Kabupaten Kampar</option>
+                        <option>Kabupaten Indragiri Hulu</option>
+                        <option>Kabupaten Bengkalis</option>
+                        <option>Kabupaten Indragiri Hilir</option>
+                        <option>Kabupaten Pelalawan</option>
+                        <option>Kabupaten Rokan Hulu</option>
+                        <option>Kabupaten Rokan Hilir</option>
+                        <option>Kabupaten Siak</option>
+                        <option>Kabupaten Kuantan Singingi</option>
+                        <option>Kabupaten Kepulauan Meranti</option>
+                        <option>Kota Pekanbaru</option>
+                        <option>Kota Dumai</option>
+                      </optgroup>
+                      <optgroup label="Jambi">
+                        <option>Kabupaten Kerinci</option>
+                        <option>Kabupaten Merangin</option>
+                        <option>Kabupaten Sarolangun</option>
+                        <option>Kabupaten Batanghari</option>
+                        <option>Kabupaten Muaro Jambi</option>
+                        <option>Kabupaten Tanjung Jabung Barat</option>
+                        <option>Kabupaten Tanjung Jabung Timur</option>
+                        <option>Kabupaten Bungo</option>
+                        <option>Kabupaten Tebo</option>
+                        <option>Kota Jambi</option>
+                        <option>Kota Sungai Penuh</option>
+                      </optgroup>
+                      <optgroup label="Sumatera Selatan">
+                        <option>Kabupaten Ogan Komering Ulu</option>
+                        <option>Kabupaten Ogan Komering Ilir</option>
+                        <option>Kabupaten Muara Enim</option>
+                        <option>Kabupaten Lahat</option>
+                        <option>Kabupaten Musi Rawas</option>
+                        <option>Kabupaten Musi Banyuasin</option>
+                        <option>Kabupaten Banyuasin</option>
+                        <option>Kabupaten Ogan Komering Ulu Timur</option>
+                        <option>Kabupaten Ogan Komering Ulu Selatan</option>
+                        <option>Kabupaten Ogan Ilir</option>
+                        <option>Kabupaten Empat Lawang</option>
+                        <option>Kabupaten Penukal Abab Lematang Ilir</option>
+                        <option>Kabupaten Musi Rawas Utara</option>
+                        <option>Kota Palembang</option>
+                        <option>Kota Pagar Alam</option>
+                        <option>Kota Lubuk Linggau</option>
+                        <option>Kota Prabumulih</option>
+                      </optgroup>
+                      <optgroup label="Bengkulu">
+                        <option>Kabupaten Bengkulu Selatan</option>
+                        <option>Kabupaten Rejang Lebong</option>
+                        <option>Kabupaten Bengkulu Utara</option>
+                        <option>Kabupaten Kaur</option>
+                        <option>Kabupaten Seluma</option>
+                        <option>Kabupaten Mukomuko</option>
+                        <option>Kabupaten Lebong</option>
+                        <option>Kabupaten Kepahiang</option>
+                        <option>Kabupaten Bengkulu Tengah</option>
+                        <option>Kota Bengkulu</option>
+                      </optgroup>
+                      <optgroup label="Lampung">
+                        <option>Kabupaten Lampung Selatan</option>
+                        <option>Kabupaten Lampung Tengah</option>
+                        <option>Kabupaten Lampung Utara</option>
+                        <option>Kabupaten Lampung Barat</option>
+                        <option>Kabupaten Tulang Bawang</option>
+                        <option>Kabupaten Tanggamus</option>
+                        <option>Kabupaten Lampung Timur</option>
+                        <option>Kabupaten Way Kanan</option>
+                        <option>Kabupaten Pesawaran</option>
+                        <option>Kabupaten Pringsewu</option>
+                        <option>Kabupaten Mesuji</option>
+                        <option>Kabupaten Tulang Bawang Barat</option>
+                        <option>Kabupaten Pesisir Barat</option>
+                        <option>Kota Bandar Lampung</option>
+                        <option>Kota Metro</option>
+                      </optgroup>
+                      <optgroup label="Kepulauan Bangka Belitung">
+                        <option>Kabupaten Bangka</option>
+                        <option>Kabupaten Belitung</option>
+                        <option>Kabupaten Bangka Selatan</option>
+                        <option>Kabupaten Bangka Tengah</option>
+                        <option>Kabupaten Bangka Barat</option>
+                        <option>Kabupaten Belitung Timur</option>
+                        <option>Kota Pangkal Pinang</option>
+                      </optgroup>
+                      <optgroup label="Kepulauan Riau">
+                        <option>Kabupaten Bintan</option>
+                        <option>Kabupaten Karimun</option>
+                        <option>Kabupaten Natuna</option>
+                        <option>Kabupaten Lingga</option>
+                        <option>Kabupaten Kepulauan Anambas</option>
+                        <option>Kota Batam</option>
+                        <option>Kota Tanjung Pinang</option>
+                      </optgroup>
+                      <optgroup label="Daerah Khusus Ibukota Jakarta">
+                        <option>Kabupaten Administrasi Kepulauan Seribu</option>
+                        <option>Kota Administrasi Jakarta Pusat</option>
+                        <option>Kota Administrasi Jakarta Utara</option>
+                        <option>Kota Administrasi Jakarta Barat</option>
+                        <option>Kota Administrasi Jakarta Selatan</option>
+                        <option>Kota Administrasi Jakarta Timur</option>
+                      </optgroup>
+                      <optgroup label="Jawa Barat">
+                        <option>Kabupaten Bogor</option>
+                        <option>Kabupaten Sukabumi</option>
+                        <option>Kabupaten Cianjur</option>
+                        <option>Kabupaten Bandung</option>
+                        <option>Kabupaten Garut</option>
+                        <option>Kabupaten Tasikmalaya</option>
+                        <option>Kabupaten Ciamis</option>
+                        <option>Kabupaten Kuningan</option>
+                        <option>Kabupaten Cirebon</option>
+                        <option>Kabupaten Majalengka</option>
+                        <option>Kabupaten Sumedang</option>
+                        <option>Kabupaten Indramayu</option>
+                        <option>Kabupaten Subang</option>
+                        <option>Kabupaten Purwakarta</option>
+                        <option>Kabupaten Karawang</option>
+                        <option>Kabupaten Bekasi</option>
+                        <option>Kabupaten Bandung Barat</option>
+                        <option>Kabupaten Pangandaran</option>
+                        <option>Kota Bogor</option>
+                        <option>Kota Sukabumi</option>
+                        <option>Kota Bandung</option>
+                        <option>Kota Cirebon</option>
+                        <option>Kota Bekasi</option>
+                        <option>Kota Depok</option>
+                        <option>Kota Cimahi</option>
+                        <option>Kota Tasikmalaya</option>
+                        <option>Kota Banjar</option>
+                      </optgroup>
+                      <optgroup label="Jawa Tengah">
+                        <option>Kabupaten Cilacap</option>
+                        <option>Kabupaten Banyumas</option>
+                        <option>Kabupaten Purbalingga</option>
+                        <option>Kabupaten Banjarnegara</option>
+                        <option>Kabupaten Kebumen</option>
+                        <option>Kabupaten Purworejo</option>
+                        <option>Kabupaten Wonosobo</option>
+                        <option>Kabupaten Magelang</option>
+                        <option>Kabupaten Boyolali</option>
+                        <option>Kabupaten Klaten</option>
+                        <option>Kabupaten Sukoharjo</option>
+                        <option>Kabupaten Wonogiri</option>
+                        <option>Kabupaten Karanganyar</option>
+                        <option>Kabupaten Sragen</option>
+                        <option>Kabupaten Grobogan</option>
+                        <option>Kabupaten Blora</option>
+                        <option>Kabupaten Rembang</option>
+                        <option>Kabupaten Pati</option>
+                        <option>Kabupaten Kudus</option>
+                        <option>Kabupaten Jepara</option>
+                        <option>Kabupaten Demak</option>
+                        <option>Kabupaten Semarang</option>
+                        <option>Kabupaten Temanggung</option>
+                        <option>Kabupaten Kendal</option>
+                        <option>Kabupaten Batang</option>
+                        <option>Kabupaten Pekalongan</option>
+                        <option>Kabupaten Pemalang</option>
+                        <option>Kabupaten Tegal</option>
+                        <option>Kabupaten Brebes</option>
+                        <option>Kota Magelang</option>
+                        <option>Kota Surakarta</option>
+                        <option>Kota Salatiga</option>
+                        <option>Kota Semarang</option>
+                        <option>Kota Pekalongan</option>
+                        <option>Kota Tegal</option>
+                      </optgroup>
+                      <optgroup label="Daerah Istimewa Yogyakarta">
+                        <option>Kabupaten Kulon Progo</option>
+                        <option>Kabupaten Bantul</option>
+                        <option>Kabupaten Gunungkidul</option>
+                        <option>Kabupaten Sleman</option>
+                        <option>Kota Yogyakarta</option>
+                      </optgroup>
+                      <optgroup label="Jawa Timur">
+                        <option>Kabupaten Pacitan</option>
+                        <option>Kabupaten Ponorogo</option>
+                        <option>Kabupaten Trenggalek</option>
+                        <option>Kabupaten Tulungagung</option>
+                        <option>Kabupaten Blitar</option>
+                        <option>Kabupaten Kediri</option>
+                        <option>Kabupaten Malang</option>
+                        <option>Kabupaten Lumajang</option>
+                        <option>Kabupaten Jember</option>
+                        <option>Kabupaten Banyuwangi</option>
+                        <option>Kabupaten Bondowoso</option>
+                        <option>Kabupaten Situbondo</option>
+                        <option>Kabupaten Probolinggo</option>
+                        <option>Kabupaten Pasuruan</option>
+                        <option>Kabupaten Sidoarjo</option>
+                        <option>Kabupaten Mojokerto</option>
+                        <option>Kabupaten Jombang</option>
+                        <option>Kabupaten Nganjuk</option>
+                        <option>Kabupaten Madiun</option>
+                        <option>Kabupaten Magetan</option>
+                        <option>Kabupaten Ngawi</option>
+                        <option>Kabupaten Bojonegoro</option>
+                        <option>Kabupaten Tuban</option>
+                        <option>Kabupaten Lamongan</option>
+                        <option>Kabupaten Gresik</option>
+                        <option>Kabupaten Bangkalan</option>
+                        <option>Kabupaten Sampang</option>
+                        <option>Kabupaten Pamekasan</option>
+                        <option>Kabupaten Sumenep</option>
+                        <option>Kota Kediri</option>
+                        <option>Kota Blitar</option>
+                        <option>Kota Malang</option>
+                        <option>Kota Probolinggo</option>
+                        <option>Kota Pasuruan</option>
+                        <option>Kota Mojokerto</option>
+                        <option>Kota Madiun</option>
+                        <option>Kota Surabaya</option>
+                        <option>Kota Batu</option>
+                      </optgroup>
+                      <optgroup label="Banten">
+                        <option>Kabupaten Pandeglang</option>
+                        <option>Kabupaten Lebak</option>
+                        <option>Kabupaten Tangerang</option>
+                        <option>Kabupaten Serang</option>
+                        <option>Kota Tangerang</option>
+                        <option>Kota Cilegon</option>
+                        <option>Kota Serang</option>
+                        <option>Kota Tangerang Selatan</option>
+                      </optgroup>
+                      <optgroup label="Bali">
+                        <option>Kabupaten Jembrana</option>
+                        <option>Kabupaten Tabanan</option>
+                        <option>Kabupaten Badung</option>
+                        <option>Kabupaten Gianyar</option>
+                        <option>Kabupaten Klungkung</option>
+                        <option>Kabupaten Bangli</option>
+                        <option>Kabupaten Karangasem</option>
+                        <option>Kabupaten Buleleng</option>
+                        <option>Kota Denpasar</option>
+                      </optgroup>
+                      <optgroup label="Nusa Tenggara Barat">
+                        <option>Kabupaten Lombok Barat</option>
+                        <option>Kabupaten Lombok Tengah</option>
+                        <option>Kabupaten Lombok Timur</option>
+                        <option>Kabupaten Sumbawa</option>
+                        <option>Kabupaten Dompu</option>
+                        <option>Kabupaten Bima</option>
+                        <option>Kabupaten Sumbawa Barat</option>
+                        <option>Kabupaten Lombok Utara</option>
+                        <option>Kota Mataram</option>
+                        <option>Kota Bima</option>
+                      </optgroup>
+                      <optgroup label="Nusa Tenggara Timur">
+                        <option>Kabupaten Kupang</option>
+                        <option>Kabupaten Timor Tengah Selatan</option>
+                        <option>Kabupaten Timor Tengah Utara</option>
+                        <option>Kabupaten Belu</option>
+                        <option>Kabupaten Alor</option>
+                        <option>Kabupaten Flores Timur</option>
+                        <option>Kabupaten Sikka</option>
+                        <option>Kabupaten Ende</option>
+                        <option>Kabupaten Ngada</option>
+                        <option>Kabupaten Manggarai</option>
+                        <option>Kabupaten Sumba Timur</option>
+                        <option>Kabupaten Sumba Barat</option>
+                        <option>Kabupaten Lembata</option>
+                        <option>Kabupaten Rote Ndao</option>
+                        <option>Kabupaten Manggarai Barat</option>
+                        <option>Kabupaten Nagekeo</option>
+                        <option>Kabupaten Sumba Tengah</option>
+                        <option>Kabupaten Sumba Barat Daya</option>
+                        <option>Kabupaten Manggarai Timur</option>
+                        <option>Kabupaten Sabu Raijua</option>
+                        <option>Kabupaten Malaka</option>
+                        <option>Kota Kupang</option>
+                      </optgroup>
+                      <optgroup label="Kalimantan Barat">
+                        <option>Kabupaten Sambas</option>
+                        <option>Kabupaten Mempawah</option>
+                        <option>Kabupaten Sanggau</option>
+                        <option>Kabupaten Ketapang</option>
+                        <option>Kabupaten Sintang</option>
+                        <option>Kabupaten Kapuas Hulu</option>
+                        <option>Kabupaten Bengkayang</option>
+                        <option>Kabupaten Landak</option>
+                        <option>Kabupaten Sekadau</option>
+                        <option>Kabupaten Melawi</option>
+                        <option>Kabupaten Kayong Utara</option>
+                        <option>Kabupaten Kubu Raya</option>
+                        <option>Kota Pontianak</option>
+                        <option>Kota Singkawang</option>
+                      </optgroup>
+                      <optgroup label="Kalimantan Tengah">
+                        <option>Kabupaten Kotawaringin Barat</option>
+                        <option>Kabupaten Kotawaringin Timur</option>
+                        <option>Kabupaten Kapuas</option>
+                        <option>Kabupaten Barito Selatan</option>
+                        <option>Kabupaten Barito Utara</option>
+                        <option>Kabupaten Katingan</option>
+                        <option>Kabupaten Seruyan</option>
+                        <option>Kabupaten Sukamara</option>
+                        <option>Kabupaten Lamandau</option>
+                        <option>Kabupaten Gunung Mas</option>
+                        <option>Kabupaten Pulang Pisau</option>
+                        <option>Kabupaten Murung Raya</option>
+                        <option>Kabupaten Barito Timur</option>
+                        <option>Kota Palangkaraya</option>
+                      </optgroup>
+                      <optgroup label="Kalimantan Selatan">
+                        <option>Kabupaten Tanah Laut</option>
+                        <option>Kabupaten Kotabaru</option>
+                        <option>Kabupaten Banjar</option>
+                        <option>Kabupaten Barito Kuala</option>
+                        <option>Kabupaten Tapin</option>
+                        <option>Kabupaten Hulu Sungai Selatan</option>
+                        <option>Kabupaten Hulu Sungai Tengah</option>
+                        <option>Kabupaten Hulu Sungai Utara</option>
+                        <option>Kabupaten Tabalong</option>
+                        <option>Kabupaten Tanah Bumbu</option>
+                        <option>Kabupaten Balangan</option>
+                        <option>Kota Banjarmasin</option>
+                        <option>Kota Banjarbaru</option>
+                      </optgroup>
+                      <optgroup label="Kalimantan Timur">
+                        <option>Kabupaten Paser</option>
+                        <option>Kabupaten Kutai Kartanegara</option>
+                        <option>Kabupaten Berau</option>
+                        <option>Kabupaten Kutai Barat</option>
+                        <option>Kabupaten Kutai Timur</option>
+                        <option>Kabupaten Penajam Paser Utara</option>
+                        <option>Kabupaten Mahakam Ulu</option>
+                        <option>Kota Balikpapan</option>
+                        <option>Kota Samarinda</option>
+                        <option>Kota Bontang</option>
+                      </optgroup>
+                      <optgroup label="Kalimantan Utara">
+                        <option>Kabupaten Bulungan</option>
+                        <option>Kabupaten Malinau</option>
+                        <option>Kabupaten Nunukan</option>
+                        <option>Kabupaten Tana Tidung</option>
+                        <option>Kota Tarakan</option>
+                      </optgroup>
+                      <optgroup label="Sulawesi Utara">
+                        <option>Kabupaten Bolaang Mongondow</option>
+                        <option>Kabupaten Minahasa</option>
+                        <option>Kabupaten Kepulauan Sangihe</option>
+                        <option>Kabupaten Kepulauan Talaud</option>
+                        <option>Kabupaten Minahasa Selatan</option>
+                        <option>Kabupaten Minahasa Utara</option>
+                        <option>Kabupaten Minahasa Tenggara</option>
+                        <option>Kabupaten Bolaang Mongondow Utara</option>
+                        <option>Kabupaten Kep. Siau Tagulandang Biaro</option>
+                        <option>Kabupaten Bolaang Mongondow Timur</option>
+                        <option>Kabupaten Bolaang Mongondow Selatan</option>
+                        <option>Kota Manado</option>
+                        <option>Kota Bitung</option>
+                        <option>Kota Tomohon</option>
+                        <option>Kota Kotamobagu</option>
+                      </optgroup>
+                      <optgroup label="Sulawesi Tengah">
+                        <option>Kabupaten Banggai</option>
+                        <option>Kabupaten Poso</option>
+                        <option>Kabupaten Donggala</option>
+                        <option>Kabupaten Toli-Toli</option>
+                        <option>Kabupaten Buol</option>
+                        <option>Kabupaten Morowali</option>
+                        <option>Kabupaten Banggai Kepulauan</option>
+                        <option>Kabupaten Parigi Moutong</option>
+                        <option>Kabupaten Tojo Una Una</option>
+                        <option>Kabupaten Sigi</option>
+                        <option>Kabupaten Banggai Laut</option>
+                        <option>Kabupaten Morowali Utara</option>
+                        <option>Kota Palu</option>
+                      </optgroup>
+                      <optgroup label="Sulawesi Selatan">
+                        <option>Kabupaten Kepulauan Selayar</option>
+                        <option>Kabupaten Bulukumba</option>
+                        <option>Kabupaten Bantaeng</option>
+                        <option>Kabupaten Jeneponto</option>
+                        <option>Kabupaten Takalar</option>
+                        <option>Kabupaten Gowa</option>
+                        <option>Kabupaten Sinjai</option>
+                        <option>Kabupaten Bone</option>
+                        <option>Kabupaten Maros</option>
+                        <option>Kabupaten Pangkajene dan Kepulauan</option>
+                        <option>Kabupaten Barru</option>
+                        <option>Kabupaten Soppeng</option>
+                        <option>Kabupaten Wajo</option>
+                        <option>Kabupaten Sidenreng Rappang</option>
+                        <option>Kabupaten Pinrang</option>
+                        <option>Kabupaten Enrekang</option>
+                        <option>Kabupaten Luwu</option>
+                        <option>Kabupaten Tana Toraja</option>
+                        <option>Kabupaten Luwu Utara</option>
+                        <option>Kabupaten Luwu Timur</option>
+                        <option>Kabupaten Toraja Utara</option>
+                        <option>Kota Makassar</option>
+                        <option>Kota Parepare</option>
+                        <option>Kota Palopo</option>
+                      </optgroup>
+                      <optgroup label="Sulawesi Tenggara">
+                        <option>Kabupaten Kolaka</option>
+                        <option>Kabupaten Konawe</option>
+                        <option>Kabupaten Muna</option>
+                        <option>Kabupaten Buton</option>
+                        <option>Kabupaten Konawe Selatan</option>
+                        <option>Kabupaten Bombana</option>
+                        <option>Kabupaten Wakatobi</option>
+                        <option>Kabupaten Kolaka Utara</option>
+                        <option>Kabupaten Konawe Utara</option>
+                        <option>Kabupaten Buton Utara</option>
+                        <option>Kabupaten Kolaka Timur</option>
+                        <option>Kabupaten Konawe Kepulauan</option>
+                        <option>Kabupaten Muna Barat</option>
+                        <option>Kabupaten Buton Tengah</option>
+                        <option>Kabupaten Buton Selatan</option>
+                        <option>Kota Kendari</option>
+                        <option>Kota Bau Bau</option>
+                      </optgroup>
+                      <optgroup label="Gorontalo">
+                        <option>Kabupaten Gorontalo</option>
+                        <option>Kabupaten Boalemo</option>
+                        <option>Kabupaten Bone Bolango</option>
+                        <option>Kabupaten Pohuwato</option>
+                        <option>Kabupaten Gorontalo Utara</option>
+                        <option>Kota Gorontalo</option>
+                      </optgroup>
+                      <optgroup label="Sulawesi Barat">
+                        <option>Kabupaten Pasangkayu</option>
+                        <option>Kabupaten Mamuju</option>
+                        <option>Kabupaten Mamasa</option>
+                        <option>Kabupaten Polewali Mandar</option>
+                        <option>Kabupaten Majene</option>
+                        <option>Kabupaten Mamuju Tengah</option>
+                      </optgroup>
+                      <optgroup label="Maluku">
+                        <option>Kabupaten Maluku Tengah</option>
+                        <option>Kabupaten Maluku Tenggara</option>
+                        <option>Kabupaten Kepulauan Tanimbar</option>
+                        <option>Kabupaten Buru</option>
+                        <option>Kabupaten Seram Bagian Timur</option>
+                        <option>Kabupaten Seram Bagian Barat</option>
+                        <option>Kabupaten Kepulauan Aru</option>
+                        <option>Kabupaten Maluku Barat Daya</option>
+                        <option>Kabupaten Buru Selatan</option>
+                        <option>Kota Ambon</option>
+                        <option>Kota Tual</option>
+                      </optgroup>
+                      <optgroup label="Maluku Utara">
+                        <option>Kabupaten Halmahera Barat</option>
+                        <option>Kabupaten Halmahera Tengah</option>
+                        <option>Kabupaten Halmahera Utara</option>
+                        <option>Kabupaten Halmahera Selatan</option>
+                        <option>Kabupaten Kepulauan Sula</option>
+                        <option>Kabupaten Halmahera Timur</option>
+                        <option>Kabupaten Pulau Morotai</option>
+                        <option>Kabupaten Pulau Taliabu</option>
+                        <option>Kota Ternate</option>
+                        <option>Kota Tidore Kepulauan</option>
+                      </optgroup>
+                      <optgroup label="Papua">
+                        <option>Kabupaten Jayapura</option>
+                        <option>Kabupaten Kepulauan Yapen</option>
+                        <option>Kabupaten Biak Numfor</option>
+                        <option>Kabupaten Sarmi</option>
+                        <option>Kabupaten Keerom</option>
+                        <option>Kabupaten Waropen</option>
+                        <option>Kabupaten Supiori</option>
+                        <option>Kabupaten Mamberamo Raya</option>
+                        <option>Kota Jayapura</option>
+                      </optgroup>
+                      <optgroup label="Papua Barat">
+                        <option>Kabupaten Manokwari</option>
+                        <option>Kabupaten Fak Fak</option>
+                        <option>Kabupaten Teluk Bintuni</option>
+                        <option>Kabupaten Teluk Wondama</option>
+                        <option>Kabupaten Kaimana</option>
+                        <option>Kabupaten Manokwari Selatan</option>
+                        <option>Kabupaten Pegunungan Arfak</option>
+                      </optgroup>
+                      <optgroup label="Papua Selatan">
+                        <option>Kabupaten Merauke</option>
+                        <option>Kabupaten Boven Digoel</option>
+                        <option>Kabupaten Mappi</option>
+                        <option>Kabupaten Asmat</option>
+                      </optgroup>
+                      <optgroup label="Papua Tengah">
+                        <option>Kabupaten Nabire</option>
+                        <option>Kabupaten Puncak Jaya</option>
+                        <option>Kabupaten Paniai</option>
+                        <option>Kabupaten Mimika</option>
+                        <option>Kabupaten Puncak</option>
+                        <option>Kabupaten Dogiyai</option>
+                        <option>Kabupaten Intan Jaya</option>
+                        <option>Kabupaten Deiyai</option>
+                      </optgroup>
+                      <optgroup label="Papua Pegunungan">
+                        <option>Kabupaten Jayawijaya</option>
+                        <option>Kabupaten Pegunungan Bintang</option>
+                        <option>Kabupaten Yahukimo</option>
+                        <option>Kabupaten Tolikara</option>
+                        <option>Kabupaten Mamberamo Tengah</option>
+                        <option>Kabupaten Yalimo</option>
+                        <option>Kabupaten Lanny Jaya</option>
+                        <option>Kabupaten Nduga</option>
+                      </optgroup>
+                      <optgroup label="Papua Barat Daya">
+                        <option>Kabupaten Sorong</option>
+                        <option>Kabupaten Sorong Selatan</option>
+                        <option>Kabupaten Raja Ampat</option>
+                        <option>Kabupaten Tambrauw</option>
+                        <option>Kabupaten Maybrat</option>
+                        <option>Kota Sorong</option>
+                      </optgroup>
+                    </select>
+                    <div class="invalid-feedback">Pilih salah satu kota atau kabupaten.</div>
+                  </div>
+                </div>
+                <div class="form-text" id="kotaInfo">514 kabupaten/kota dari 38 provinsi di Indonesia.</div>
+              </div>
+              <div class="col-12">
+                <fieldset>
+                  <legend class="form-label">Hobi</legend>
+                  <div class="hobi-grid">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Membaca" id="hMembaca" name="hobi">
+                      <label class="form-check-label" for="hMembaca">Membaca</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Koding" id="hKoding" name="hobi">
+                      <label class="form-check-label" for="hKoding">Koding</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Berenang" id="hBerenang" name="hobi">
+                      <label class="form-check-label" for="hBerenang">Berenang</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Menggambar" id="hMenggambar" name="hobi">
+                      <label class="form-check-label" for="hMenggambar">Menggambar</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Menyanyi" id="hMenyanyi" name="hobi">
+                      <label class="form-check-label" for="hMenyanyi">Menyanyi</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Menari" id="hMenari" name="hobi">
+                      <label class="form-check-label" for="hMenari">Menari</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Memasak" id="hMemasak" name="hobi">
+                      <label class="form-check-label" for="hMemasak">Memasak</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Fotografi" id="hFotografi" name="hobi">
+                      <label class="form-check-label" for="hFotografi">Fotografi</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Bermain game" id="hBermainGame" name="hobi">
+                      <label class="form-check-label" for="hBermainGame">Bermain game</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Menonton film" id="hMenontonFilm" name="hobi">
+                      <label class="form-check-label" for="hMenontonFilm">Menonton film</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Mendengarkan musik" id="hMendengarkanMusik" name="hobi">
+                      <label class="form-check-label" for="hMendengarkanMusik">Mendengarkan musik</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Bersepeda" id="hBersepeda" name="hobi">
+                      <label class="form-check-label" for="hBersepeda">Bersepeda</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Traveling" id="hTraveling" name="hobi">
+                      <label class="form-check-label" for="hTraveling">Traveling</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Editing video" id="hEditingVideo" name="hobi">
+                      <label class="form-check-label" for="hEditingVideo">Editing video</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Lainnya" id="hLainnya" name="hobi">
+                      <label class="form-check-label" for="hLainnya">Lainnya</label>
+                    </div>
+                  </div>
+                  <div class="hobi-lain" id="hobiLainWrap" hidden>
+                    <input type="text" class="form-control" id="fHobiLain" placeholder="Tulis hobi lainnya" maxlength="30" aria-label="Hobi lainnya">
+                    <div class="invalid-feedback">Tulis hobi lainnya atau hilangkan centang Lainnya.</div>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="col-12 d-flex flex-wrap gap-2">
+                <button type="submit" class="btn btn-red">Daftar sekarang</button>
+                <button type="reset" class="btn btn-line">Kosongkan</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <aside class="member" id="member" aria-live="polite">
+          <div class="member-top">KARTU MEMBER WARUNG RAMYEON</div>
+          <div class="member-body">
+            <span class="member-avatar" id="mInisial">?</span>
+            <div class="member-info">
+              <b class="member-nama" id="mNama">Nama kamu</b>
+              <span class="member-kota" id="mKota">Kota belum dipilih</span>
+            </div>
+          </div>
+          <p class="member-alamat" id="mAlamat">Alamat belum diisi</p>
+          <div class="member-hobi" id="mHobi"><span class="member-chip kosong">Belum ada hobi</span></div>
+          <div class="member-foot">
+            <span>No. member</span>
+            <b id="mNo">WR-????</b>
+          </div>
+          <span class="member-stamp" id="mStamp">TERDAFTAR</span>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section steps">
+      <div class="section-head">
+        <h2>Cara pesan</h2>
+        <p>Empat langkah, dari bahan mentah sampai siap disajikan.</p>
+      </div>
+      <ol class="step-list">
+        <li>
+          <h3>Pesan</h3>
+          <p>Racik pesanan di atas, lalu kirim ke admin di Telegram.</p>
+        </li>
+        <li>
+          <h3>Kirim bahan &amp; bayar</h3>
+          <p>Kirim foto, lagu, teks, dan referensi, lalu bayar full di awal.</p>
+        </li>
+        <li>
+          <h3>Cicipi</h3>
+          <p>Kami kirim preview. Bilang bagian mana yang kurang bumbu.</p>
+        </li>
+        <li>
+          <h3>Sajikan</h3>
+          <p>File final dikirim dalam kualitas penuh, siap kamu pakai.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="section-head">
+        <h2>Tanya-tanya</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Bisa inrush?</summary>
+          <p>Bisa. Deadline 3 – 7 hari dihitung inrush, dan kurang dari 3 hari dihitung inrush besar. Biaya inrush ditentukan admin. Line Distribution tidak bisa inrush.</p>
+        </details>
+        <details>
+          <summary>Bayarnya kapan?</summary>
+          <p>Pembayaran full di awal, sebelum pesanan dikerjakan. Kami tidak menerima DP. Lengkapnya ada di bagian Regulasi.</p>
+        </details>
+        <details>
+          <summary>Kalau saya belum punya konsep, bisa dibantu?</summary>
+          <p>Bisa. Kirim bahan dan cerita singkat tentang proyekmu, nanti kami usulkan gaya, warna, dan font yang cocok.</p>
+        </details>
+        <details>
+          <summary>Chat ke siapa?</summary>
+          <p>Boleh ke @jRami (owner) atau @lkimbora (admin). Dua-duanya bisa melayani semua jenis edit.</p>
+        </details>
+        <details>
+          <summary>Aplikasi apa yang dipakai?</summary>
+          <p>After Effects, Alight Motion, dan CapCut untuk video. Photoshop dan ibisPaint untuk desain. Kalau butuh file project-nya, tanyakan ke admin saat order.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Lapar konten?</h2>
+      <p>Langsung chat admin kami di Telegram.</p>
+      <div class="closing-actions">
+        <a href="https://t.me/jRami" target="_blank" rel="noopener" class="btn btn-cream">Chat @jRami</a>
+        <a href="https://t.me/lkimbora" target="_blank" rel="noopener" class="btn btn-cream">Chat @lkimbora</a>
+        <a href="https://t.me/warungramyeon" target="_blank" rel="noopener" class="btn btn-gold">Kunjungi channel kami</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <p class="logo-foot">Warung Ramyeon</p>
+      <p>Jasa edit MVL, CCL, teaser, poster, rapch, wording,<br>thumbnail, line distribution, layout KCA, dan ID card.</p>
+    </div>
+    <div>
+      <p><b>Hubungi lewat Telegram</b></p>
+      <p><a href="https://t.me/jRami" target="_blank" rel="noopener">@jRami</a><br><a href="https://t.me/lkimbora" target="_blank" rel="noopener">@lkimbora</a><br><a href="https://t.me/warungramyeon" target="_blank" rel="noopener">Channel Warung Ramyeon</a></p>
+    </div>
+    <div class="identitas">
+      <p><span>Nama</span><b>NAMA LENGKAP</b></p>
+      <p><span>NIM</span><b>A12.XXXX.XXXXX</b></p>
+    </div>
+    <p class="copy">© <span id="year"></span> Warung Ramyeon. Dibuat dengan kuah pedas.</p>
+  </footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-box">
+      <button class="modal-close" data-close aria-label="Tutup">×</button>
+      <div class="modal-art" id="modalArt"></div>
+      <div class="modal-body">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <dl id="modalMeta"></dl>
+        <button class="btn btn-red" id="modalOrder">Pesan yang seperti ini</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="picker" role="dialog" aria-modal="true" aria-labelledby="pickerTitle" hidden>
+    <div class="modal-box picker-box">
+      <button class="modal-close" data-close aria-label="Tutup">×</button>
+      <h3 id="pickerTitle">Mau chat admin yang mana?</h3>
+      <p>Dua-duanya bisa melayani pesananmu. Pesannya sudah kami siapkan dan otomatis tersalin, tinggal tempel kalau belum terisi.</p>
+      <pre class="picker-msg" id="pickerMsg"></pre>
+      <div class="admins">
+        <a class="admin" data-user="jRami" href="https://t.me/jRami" target="_blank" rel="noopener">
+          <span class="avatar"><span>J</span><img src="admin/jrami.jpg" alt="" onerror="this.remove()"></span>
+          <span><b>@jRami</b><small>Owner, buka di Telegram</small></span>
+        </a>
+        <a class="admin" data-user="lkimbora" href="https://t.me/lkimbora" target="_blank" rel="noopener">
+          <span class="avatar av-2"><span>L</span><img src="admin/lkimbora.jpg" alt="" onerror="this.remove()"></span>
+          <span><b>@lkimbora</b><small>Admin, buka di Telegram</small></span>
+        </a>
+      </div>
+      <p class="picker-note">Dengan memesan, kamu setuju dengan <a href="#regulasi" data-close>regulasi</a> kami.</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#1B2A4A"/><stop offset="1" stop-color="#E86A2C"/>
+      </linearGradient>
+      <g id="scene">
+        <rect width="800" height="420" fill="url(#sky)"/>
+        <circle cx="640" cy="90" r="38" fill="#FFE7B0"/>
+        <g fill="#FFFDF8"><circle cx="90" cy="60" r="2"/><circle cx="220" cy="40" r="1.6"/><circle cx="360" cy="80" r="2"/><circle cx="500" cy="30" r="1.5"/><circle cx="740" cy="160" r="1.8"/></g>
+        <path d="M0 300l120-70 110 60 140-90 150 80 120-60 160 80v120H0z" fill="#2B3B5A"/>
+        <rect x="140" y="220" width="200" height="140" fill="#7A2E1A"/>
+        <path d="M120 230l120-80 120 80z" fill="#3B1C0C"/>
+        <path d="M120 230l120-80 120 80" stroke="#FFFDF8" stroke-width="10" fill="none"/>
+        <rect x="170" y="260" width="44" height="40" fill="#FFC23D"/>
+        <rect x="266" y="260" width="44" height="40" fill="#FFC23D"/>
+        <rect x="222" y="300" width="36" height="60" fill="#3B1C0C"/>
+        <g fill="#FF7A1A"><circle cx="150" cy="232" r="5"/><circle cx="180" cy="212" r="5"/><circle cx="210" cy="192" r="5"/><circle cx="270" cy="192" r="5"/><circle cx="300" cy="212" r="5"/><circle cx="330" cy="232" r="5"/></g>
+        <g fill="#D7261E"><circle cx="165" cy="222" r="4"/><circle cx="195" cy="202" r="4"/><circle cx="285" cy="202" r="4"/><circle cx="315" cy="222" r="4"/></g>
+        <path d="M520 360l60-150 60 150z" fill="#17402F"/>
+        <path d="M535 300l45-110 45 110z" fill="#1F5A40"/>
+        <path d="M580 186l8 16h-16z" fill="#FFC23D"/>
+        <g fill="#D7261E"><circle cx="560" cy="300" r="6"/><circle cx="600" cy="320" r="6"/><circle cx="585" cy="260" r="5"/></g>
+        <g fill="#FFC23D"><circle cx="575" cy="335" r="5"/><circle cx="612" cy="280" r="5"/><circle cx="555" cy="270" r="4"/></g>
+        <rect x="0" y="360" width="800" height="60" fill="#EDE6F2"/>
+        <path d="M0 360q200-20 400 0t400 0v10H0z" fill="#FFFDF8"/>
+      </g>
+    </defs>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
